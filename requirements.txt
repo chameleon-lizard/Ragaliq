@@ -1,0 +1,6 @@
+faiss-cpu==1.9.0
+transformers==4.46.1
+vllm==0.6.2
+numpy==1.26.4
+torch==2.4.0
+accelerate==1.1.0
