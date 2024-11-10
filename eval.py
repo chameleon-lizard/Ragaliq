@@ -2,7 +2,6 @@ import argparse
 import pathlib
 import json
 
-from main import Chatbot
 from tqdm import tqdm
 
 import pandas as pd
@@ -53,7 +52,7 @@ def judge(item, q, q_lock, sem):
 
 def generate_answers(
     data: dict,
-    c: Chatbot,
+    c,
     save_filename: str | None = None,
 ) -> list[dict[str, str]]:
     outputs = []
@@ -158,6 +157,11 @@ if __name__ == "__main__":
 
     args = parse_args()
     text = pathlib.Path("data/orientation.md").read_text()
+
+    if args.embedder_model_id == "wordllama/wordllama":
+        from cpurag import Chatbot
+    else:
+        from main import Chatbot
 
     c = Chatbot(
         knowledge_base=text,

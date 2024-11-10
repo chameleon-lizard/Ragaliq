@@ -9,6 +9,9 @@ import transformers
 import tqdm
 import vllm
 
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_huggingface import HuggingFaceEmbeddings
+
 
 class Chatbot:
     def __init__(
@@ -46,9 +49,10 @@ class Chatbot:
 
         self.reader_llm = vllm.LLM(
             model=self.reader_model_id,
-            max_model_len=2048,
+            max_model_len=4096,
             trust_remote_code=True,
         )
+
         self.sampling_params = vllm.SamplingParams(
             **json.loads(pathlib.Path(sampling_params).read_text())
         )
@@ -132,9 +136,22 @@ Reranker model: {self.reranker_model_id}
         emb_size = len(self.embed("test embedding")[0])
         embedding_db = np.empty((0, emb_size), dtype=np.float32)
 
+        model_name = self.embedder_model_id
+        model_kwargs = {"device": "cuda"}
+        encode_kwargs = {"normalize_embeddings": False}
+        hf = HuggingFaceEmbeddings(
+            model_name=model_name,
+            model_kwargs=model_kwargs,
+            encode_kwargs=encode_kwargs,
+        )
+
+        text_splitter = SemanticChunker(hf)
+        docs = text_splitter.create_documents([knowledge_base])
+
         idx_to_str = dict()
 
-        for idx, chunk in tqdm.tqdm(enumerate(knowledge_base.splitlines())):
+        for idx, chunk in tqdm.tqdm(enumerate(docs)):
+            chunk = chunk.page_content
             embedding = self.embed(chunk)
             embedding_db = np.append(embedding_db, embedding, axis=0)
 
@@ -208,7 +225,7 @@ Reranker model: {self.reranker_model_id}
             }
         )
 
-        res = self.reader_llm.chat(messages_)
+        res = self.reader_llm.chat(messages_, self.sampling_params)
 
         return res[0].outputs[0].text, "\n".join(
             (f"Sim: {sim:.2f} - {doc}" for doc, sim in ranked[:6])
@@ -220,6 +237,7 @@ if __name__ == "__main__":
     c = Chatbot(
         knowledge_base=s,
         reader_model_id="Qwen/Qwen2-1.5B-Instruct",
+        sampling_params="cfg/qwen_25_7b.json",
         embedder_model_id="sentence-transformers/all-MiniLM-L6-v2",
         reranker_model_id="BAAI/bge-reranker-base",
         use_decoder_as_embedder=False,
