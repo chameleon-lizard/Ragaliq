@@ -111,6 +111,9 @@ Reranker model: {self.reranker_model_id}
                     sequence_lengths,
                 ]
 
+        if "instruct" in self.embedder_model_id.lower():
+            query = f"Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: {query}"
+
         with torch.no_grad():
             input_ids = self.embedder_tokenizer(
                 [query],
