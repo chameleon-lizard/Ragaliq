@@ -9,6 +9,7 @@ import pandas as pd
 import os
 import dotenv
 import threading
+import torch
 from queue import Queue
 
 import src.prompts as prompts
@@ -246,3 +247,8 @@ if __name__ == "__main__":
             )
 
             pathlib.Path(f"res/results_{save_filename}.txt").write_text(res_str)
+
+        del c
+        torch.cuda.empty_cache()
+        torch.cuda.reset_peak_memory_stats()
+        torch.cuda.synchronize()
