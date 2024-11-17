@@ -63,7 +63,7 @@ class Chatbot:
         )
 
         # Semantic chunking
-        self.chunks = self.wl.split(self.knowledge_base, target_size=256)
+        self.chunks = self.knowledge_base.splitlines()
 
         # Set the flag to True once loading is complete
         self.is_loaded = True

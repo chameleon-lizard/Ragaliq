@@ -150,8 +150,8 @@ Reranker model: {self.reranker_model_id}
 
         idx_to_str = dict()
 
-        for idx, chunk in tqdm.tqdm(enumerate(docs)):
-            chunk = chunk.page_content
+        for idx, chunk in tqdm.tqdm(enumerate(knowledge_base.splitlines())):
+            # chunk = chunk.page_content
             embedding = self.embed(chunk)
             embedding_db = np.append(embedding_db, embedding, axis=0)
 

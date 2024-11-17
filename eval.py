@@ -153,90 +153,96 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    eval_files = ["data/questions_en.json"]
+    languages = ["en", "ru", "de", "fr", "es", "zh"]
 
     args = parse_args()
-    text = pathlib.Path("data/orientation.md").read_text()
+    for language in languages:
+        eval_files = [f"data/questions_{language}.json"]
+        text = pathlib.Path(f"data/orientation_{language}.md").read_text()
 
-    if args.embedder_model_id == "wordllama/wordllama":
-        from cpurag import Chatbot
-    else:
-        from main import Chatbot
+        if args.embedder_model_id == "wordllama/wordllama":
+            from cpurag import Chatbot
+        else:
+            from main import Chatbot
 
-    c = Chatbot(
-        knowledge_base=text,
-        reader_model_id=args.reader_model_id,
-        sampling_params=args.sampling_params,
-        embedder_model_id=args.embedder_model_id,
-        reranker_model_id=args.reranker_model_id,
-        use_decoder_as_embedder=args.use_decoder_as_embedder,
-    )
-
-    evals = []
-    times = []
-    for eval_file in eval_files:
-        data = json.loads(pathlib.Path(eval_file).read_text())
-        save_filename = (
-            eval_file.split("/")[-1].split(".")[0]
-            + "_"
-            + args.reader_model_id.split("/")[-1]
-            + "_"
-            + args.embedder_model_id.split("/")[-1]
-            + "_"
-            + args.reranker_model_id.split("/")[-1]
+        c = Chatbot(
+            knowledge_base=text,
+            reader_model_id=args.reader_model_id,
+            sampling_params=args.sampling_params,
+            embedder_model_id=args.embedder_model_id,
+            reranker_model_id=args.reranker_model_id,
+            use_decoder_as_embedder=args.use_decoder_as_embedder,
         )
 
-        start_time = time.time()
+        evals = []
+        times = []
+        for eval_file in eval_files:
+            data = json.loads(pathlib.Path(eval_file).read_text())
+            save_filename = (
+                eval_file.split("/")[-1].split(".")[0]
+                + "_"
+                + args.reader_model_id.split("/")[-1]
+                + "_"
+                + args.embedder_model_id.split("/")[-1]
+                + "_"
+                + args.reranker_model_id.split("/")[-1]
+                + "_"
+                + language
+            )
 
-        flattened_data = generate_answers(
-            data=data,
-            c=c,
-            save_filename=save_filename,
-        )
+            start_time = time.time()
 
-        generation_time = str(time.time() - start_time)
-        times.append(generation_time)
-
-        evals.append(
-            judge_answers(
-                flattened_data=flattened_data,
-                num_threads=1,
+            flattened_data = generate_answers(
+                data=data,
+                c=c,
                 save_filename=save_filename,
             )
-        )
 
-    for eval, eval_file, t in zip(evals, eval_files, times):
-        df = pd.DataFrame(eval)
+            generation_time = str(time.time() - start_time)
+            times.append(generation_time)
 
-        res_str = (
-            f"Eval file: {eval_file}\n"
-            + f"Judge model: {os.environ.get('JUDGE_MODEL')}\n"
-            + str(c)
-            + str(df.score.value_counts().sort_index(ascending=False))
-            + "\n\n"
-            + "Mean score: \n"
-            + str(df.score[df.score != 0].mean())
-            + "\nMedian score: \n"
-            + str(df.score[df.score != 0].median())
-            + "\nPercentage: \n"
-            + str(df.score[df.score != 0].mean() / 5 * 100)
-            + "\nPercentage with zero: \n"
-            + str(df.score.mean() / 5 * 100)
-            + "\nGeneration time: \n"
-            + str(t)
-            + "\n\n"
-        )
+            evals.append(
+                judge_answers(
+                    flattened_data=flattened_data,
+                    num_threads=50,
+                    save_filename=save_filename,
+                )
+            )
 
-        print(res_str)
+        for eval, eval_file, t in zip(evals, eval_files, times):
+            df = pd.DataFrame(eval)
 
-        save_filename = (
-            eval_file.split("/")[-1].split(".")[0]
-            + "_"
-            + args.reader_model_id.split("/")[-1]
-            + "_"
-            + args.embedder_model_id.split("/")[-1]
-            + "_"
-            + args.reranker_model_id.split("/")[-1]
-        )
+            res_str = (
+                f"Eval file: {eval_file}\n"
+                + f"Judge model: {os.environ.get('JUDGE_MODEL')}\n"
+                + str(c)
+                + str(df.score.value_counts().sort_index(ascending=False))
+                + "\n\n"
+                + "Mean score: \n"
+                + str(df.score[df.score != 0].mean())
+                + "\nMedian score: \n"
+                + str(df.score[df.score != 0].median())
+                + "\nPercentage: \n"
+                + str(df.score[df.score != 0].mean() / 5 * 100)
+                + "\nPercentage with zero: \n"
+                + str(df.score.mean() / 5 * 100)
+                + "\nGeneration time: \n"
+                + str(t)
+                + "\n\n"
+            )
 
-        pathlib.Path(f"res/results_{save_filename}.txt").write_text(res_str)
+            print(res_str)
+
+            save_filename = (
+                eval_file.split("/")[-1].split(".")[0]
+                + "_"
+                + args.reader_model_id.split("/")[-1]
+                + "_"
+                + args.embedder_model_id.split("/")[-1]
+                + "_"
+                + args.reranker_model_id.split("/")[-1]
+                + "_"
+                + language
+            )
+
+            pathlib.Path(f"res/results_{save_filename}.txt").write_text(res_str)
