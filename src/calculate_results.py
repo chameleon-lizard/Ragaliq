@@ -99,7 +99,7 @@ if __name__ == "__main__":
     )
 
     for lang in df_res.lang.unique():
-        print(lang)
+        print("\n## " + lang + "\n")
         df_subres = df_res[df_res.lang == lang]
 
         print(df_subres.sort_values("score", ascending=False).to_markdown(index=False))
