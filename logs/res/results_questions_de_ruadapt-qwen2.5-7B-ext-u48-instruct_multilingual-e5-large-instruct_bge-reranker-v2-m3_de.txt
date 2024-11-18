@@ -1,0 +1,23 @@
+Eval file: data/questions_de.json
+Judge model: google/gemini-flash-1.5
+Reader Model: RefalMachine/ruadapt_qwen2.5_7B_ext_u48_instruct
+Embedder model: intfloat/multilingual-e5-large-instruct
+Reranker model: BAAI/bge-reranker-v2-m3
+score
+5    28
+4    16
+3    11
+1    15
+Name: count, dtype: int64
+
+Mean score: 
+3.6
+Median score: 
+4.0
+Percentage: 
+72.0
+Percentage with zero: 
+72.0
+Generation time: 
+172.5082836151123
+

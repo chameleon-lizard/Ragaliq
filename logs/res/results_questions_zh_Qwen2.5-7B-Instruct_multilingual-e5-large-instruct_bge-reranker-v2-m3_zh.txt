@@ -1,0 +1,24 @@
+Eval file: data/questions_zh.json
+Judge model: google/gemini-flash-1.5
+Reader Model: Qwen/Qwen2.5-7B-Instruct
+Embedder model: intfloat/multilingual-e5-large-instruct
+Reranker model: BAAI/bge-reranker-v2-m3
+score
+5    23
+4    13
+3    13
+1     7
+0    15
+Name: count, dtype: int64
+
+Mean score: 
+3.8035714285714284
+Median score: 
+4.0
+Percentage: 
+76.07142857142857
+Percentage with zero: 
+60.0
+Generation time: 
+137.2104847431183
+

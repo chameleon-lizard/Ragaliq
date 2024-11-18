@@ -1,5 +1,6 @@
 import argparse
 import pathlib
+import time
 import json
 
 from tqdm import tqdm
@@ -15,7 +16,7 @@ from queue import Queue
 import src.prompts as prompts
 import src.utils as utils
 
-import time
+from src.rag import Chatbot
 
 dotenv.load_dotenv(".env")
 
@@ -75,7 +76,7 @@ def generate_answers(
         outputs.append(result)
 
     if save_filename is not None:
-        with open(f"eval/eval_ans_{save_filename}.json", "w") as f:
+        with open(f"logs/eval/eval_ans_{save_filename}.json", "w") as f:
             json.dump(outputs, f, indent=2)
 
     return outputs
@@ -104,14 +105,14 @@ def judge_answers(
         res.append(q.get())
 
     if save_filename is not None:
-        with open(f"eval/eval_res_{save_filename}.json", "w") as f:
+        with open(f"logs/eval/eval_res_{save_filename}.json", "w") as f:
             json.dump(res, f, indent=2)
 
     return res
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="My Program")
+    parser = argparse.ArgumentParser(description="RAGaliq eval")
     parser.add_argument(
         "--knowledge_base",
         type=str,
@@ -144,6 +145,12 @@ def parse_args():
         help="Reranker model ID",
     )
     parser.add_argument(
+        "--lang",
+        type=str,
+        default="all",
+        help="Language to evaluate. One of ['all', 'en', 'de', 'fr', 'es', 'ru', 'zh']",
+    )
+    parser.add_argument(
         "--use_decoder_as_embedder",
         action="store_true",
         default=False,
@@ -154,17 +161,20 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    languages = ["en", "ru", "de", "fr", "es", "zh"]
+    languages = ["en", "de", "fr", "es", "ru", "zh"]
 
     args = parse_args()
+    if args.lang != "all":
+        if args.lang not in languages:
+            raise ValueError(
+                f"Language {args.lang} is not yet implemented. Supported languages: {languages}."
+            )
+        else:
+            languages = [args.lang]
+
     for language in languages:
         eval_files = [f"data/questions_{language}.json"]
         text = pathlib.Path(f"data/orientation_{language}.md").read_text()
-
-        if args.embedder_model_id == "wordllama/wordllama":
-            from cpurag import Chatbot
-        else:
-            from main import Chatbot
 
         c = Chatbot(
             knowledge_base=text,
@@ -246,7 +256,7 @@ if __name__ == "__main__":
                 + language
             )
 
-            pathlib.Path(f"res/results_{save_filename}.txt").write_text(res_str)
+            pathlib.Path(f"logs/res/results_{save_filename}.txt").write_text(res_str)
 
         del c
         torch.cuda.empty_cache()

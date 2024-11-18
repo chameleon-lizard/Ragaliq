@@ -1,0 +1,24 @@
+Eval file: data/questions_de.json
+Judge model: google/gemini-flash-1.5
+Reader Model: CohereForAI/aya-expanse-8b
+Embedder model: intfloat/multilingual-e5-large-instruct
+Reranker model: BAAI/bge-reranker-v2-m3
+score
+5    27
+4    19
+3    12
+2     3
+1     9
+Name: count, dtype: int64
+
+Mean score: 
+3.742857142857143
+Median score: 
+4.0
+Percentage: 
+74.85714285714286
+Percentage with zero: 
+74.85714285714286
+Generation time: 
+187.60230016708374
+

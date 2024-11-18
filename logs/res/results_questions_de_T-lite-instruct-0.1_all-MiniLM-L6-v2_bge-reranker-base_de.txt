@@ -1,0 +1,25 @@
+Eval file: data/questions_de.json
+Judge model: google/gemini-flash-1.5
+Reader Model: AnatoliiPotapov/T-lite-instruct-0.1
+Embedder model: sentence-transformers/all-MiniLM-L6-v2
+Reranker model: BAAI/bge-reranker-base
+score
+5     9
+4    26
+3     8
+2     1
+1    25
+0     1
+Name: count, dtype: int64
+
+Mean score: 
+2.898550724637681
+Median score: 
+4.0
+Percentage: 
+57.971014492753625
+Percentage with zero: 
+57.14285714285714
+Generation time: 
+779.0227389335632
+
