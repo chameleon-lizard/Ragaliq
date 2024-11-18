@@ -32,6 +32,7 @@ if __name__ == "__main__":
             continue
 
         df = pd.read_json(path)
+        lang = str(path).split("_")[3]
         score = calculate_score(df.score.to_list())
         mean_score = df.score[df.score != 0].mean()
         median_score = df.score[df.score != 0].median()
@@ -43,12 +44,12 @@ if __name__ == "__main__":
         twos = sum(df.score == 2)
         ones = sum(df.score == 1)
         zeros = sum(df.score == 0)
-        model_info = " ".join(str(path).split("_")[4:])
+        model_info = " ".join(str(path).split("_")[4:-1])
         model_name, embedder_name, reranker_name = model_info.split()
         reranker_name = reranker_name.split(".json")[0]
         generation_time = (
             pathlib.Path(
-                f"res/results_questions_en_{model_name}_{embedder_name}_{reranker_name}.txt"
+                f"res/results_questions_{lang}_{model_name}_{embedder_name}_{reranker_name}_{lang}.txt"
             )
             .read_text()
             .splitlines()[-2]
@@ -59,6 +60,7 @@ if __name__ == "__main__":
                 model_name,
                 embedder_name,
                 reranker_name,
+                lang,
                 score,
                 mean_score,
                 median_score,
@@ -80,6 +82,7 @@ if __name__ == "__main__":
             "model_name",
             "embedder_name",
             "reranker_name",
+            "lang",
             "score",
             "mean_grade",
             "median_grade",
@@ -95,10 +98,14 @@ if __name__ == "__main__":
         ),
     )
 
-    print(df_res.sort_values("score", ascending=False).to_markdown(index=False))
-    print()
-    print(
-        df_res.sort_values(
-            ["model_name", "score"], ascending=[False, False]
-        ).to_markdown(index=False)
-    )
+    for lang in df_res.lang.unique():
+        print(lang)
+        df_subres = df_res[df_res.lang == lang]
+
+        print(df_subres.sort_values("score", ascending=False).to_markdown(index=False))
+        print()
+        print(
+            df_subres.sort_values(
+                ["model_name", "score"], ascending=[False, False]
+            ).to_markdown(index=False)
+        )

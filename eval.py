@@ -182,11 +182,11 @@ if __name__ == "__main__":
             save_filename = (
                 eval_file.split("/")[-1].split(".")[0]
                 + "_"
-                + args.reader_model_id.split("/")[-1]
+                + args.reader_model_id.split("/")[-1].replace("_", "-")
                 + "_"
-                + args.embedder_model_id.split("/")[-1]
+                + args.embedder_model_id.split("/")[-1].replace("_", "-")
                 + "_"
-                + args.reranker_model_id.split("/")[-1]
+                + args.reranker_model_id.split("/")[-1].replace("_", "-")
                 + "_"
                 + language
             )
@@ -237,11 +237,11 @@ if __name__ == "__main__":
             save_filename = (
                 eval_file.split("/")[-1].split(".")[0]
                 + "_"
-                + args.reader_model_id.split("/")[-1]
+                + args.reader_model_id.split("/")[-1].replace("_", "-")
                 + "_"
-                + args.embedder_model_id.split("/")[-1]
+                + args.embedder_model_id.split("/")[-1].replace("_", "-")
                 + "_"
-                + args.reranker_model_id.split("/")[-1]
+                + args.reranker_model_id.split("/")[-1].replace("_", "-")
                 + "_"
                 + language
             )
