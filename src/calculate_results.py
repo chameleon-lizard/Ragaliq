@@ -33,7 +33,8 @@ if __name__ == "__main__":
 
         df = pd.read_json(path)
         lang = str(path).split("_")[3]
-        score = calculate_score(df.score.to_list())
+        weighted_score = calculate_score(df.score.to_list())
+        language_consistency_score = df.language_consistency_score.mean()
         mean_score = df.score[df.score != 0].mean()
         median_score = df.score[df.score != 0].median()
         percentage = df.score[df.score != 0].mean() / 5 * 100
@@ -61,7 +62,8 @@ if __name__ == "__main__":
                 embedder_name,
                 reranker_name,
                 lang,
-                score,
+                weighted_score,
+                language_consistency_score,
                 mean_score,
                 median_score,
                 percentage,
@@ -83,7 +85,8 @@ if __name__ == "__main__":
             "embedder_name",
             "reranker_name",
             "lang",
-            "score",
+            "weighted_score",
+            "language_consistency_score",
             "mean_grade",
             "median_grade",
             "percentage",
@@ -102,10 +105,14 @@ if __name__ == "__main__":
         print("\n## " + lang + "\n")
         df_subres = df_res[df_res.lang == lang]
 
-        print(df_subres.sort_values("score", ascending=False).to_markdown(index=False))
+        print(
+            df_subres.sort_values("weighted_score", ascending=False).to_markdown(
+                index=False
+            )
+        )
         print()
         print(
             df_subres.sort_values(
-                ["model_name", "score"], ascending=[False, False]
+                ["model_name", "weighted_score"], ascending=[False, False]
             ).to_markdown(index=False)
         )

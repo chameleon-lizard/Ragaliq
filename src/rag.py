@@ -9,8 +9,7 @@ import transformers
 import tqdm
 import vllm
 
-from langchain_experimental.text_splitter import SemanticChunker
-from langchain_huggingface import HuggingFaceEmbeddings
+import src.prompts as prompts
 
 
 class Chatbot:
@@ -21,35 +20,39 @@ class Chatbot:
         sampling_params: str = "",
         embedder_model_id: str = "",
         reranker_model_id: str = "",
+        lang: str = "en",
         use_decoder_as_embedder: bool = False,
     ) -> None:
         self.reader_model_id = reader_model_id
         self.embedder_model_id = embedder_model_id
         self.reranker_model_id = reranker_model_id
 
+        self.lang = lang
+
         # Dirty hack to find out if the model supports system role. TODO: rewrite with tokenizers.
-        if "gemma" not in reader_model_id:
+        if "gemma" not in reader_model_id.lower():
             self.messages = [
                 {
                     "role": "system",
-                    "content": "You will be given documents and a question. Your task is to answer the question using these documents. Be factual and only use information from the context to answer the questions. Be concise in your answers, not more than one sentence.",
+                    "content": prompts.SYSTEM_PROMPT[self.lang],
                 },
             ]
         else:
             self.messages = [
                 {
                     "role": "user",
-                    "content": "You will be given documents and a question. Your task is to answer the question using these documents. Be factual and only use information from the context to answer the questions. Be concise in your answers, not more than one sentence.",
+                    "content": prompts.SYSTEM_PROMPT[self.lang],
                 },
                 {
                     "role": "assistant",
-                    "content": "Okay! Send me the context and the question.",
+                    "content": prompts.GEMMA_RESPONSE_PROMPT[self.lang],
                 },
             ]
 
         self.reader_llm = vllm.LLM(
             model=self.reader_model_id,
             max_model_len=4096,
+            gpu_memory_utilization=0.85,
             trust_remote_code=True,
         )
 
@@ -60,6 +63,7 @@ class Chatbot:
         self.embedder_model = transformers.AutoModel.from_pretrained(
             self.embedder_model_id,
             trust_remote_code=True,
+            device_map="cuda",
         )
         self.embedder_model.eval()
         self.embedder_tokenizer = transformers.AutoTokenizer.from_pretrained(
@@ -71,11 +75,13 @@ class Chatbot:
             transformers.AutoModelForSequenceClassification.from_pretrained(
                 self.reranker_model_id,
                 trust_remote_code=True,
+                device_map="cuda",
             )
         )
         self.reranker_model.eval()
         self.reranker_tokenizer = transformers.AutoTokenizer.from_pretrained(
-            self.reranker_model_id
+            self.reranker_model_id,
+            device_map="cuda",
         )
 
         self.knowledge_base, self.embedding_index = self.build_database(knowledge_base)
@@ -122,13 +128,15 @@ Reranker model: {self.reranker_model_id}
                 truncation=True,
                 return_tensors="pt",
             )
-            outputs = self.embedder_model(**input_ids)
+            outputs = self.embedder_model(
+                **{k: v.to(self.embedder_model.device) for k, v in input_ids.items()}
+            )
 
             pooling_function = (
                 last_token_pool if self.use_decoder_as_embedder else average_pool
             )
             embeddings = pooling_function(
-                outputs.last_hidden_state, input_ids["attention_mask"]
+                outputs.last_hidden_state.cpu(), input_ids["attention_mask"]
             )
             embeddings = F.normalize(embeddings, p=2, dim=1)
 
@@ -138,18 +146,6 @@ Reranker model: {self.reranker_model_id}
         # Getting embedding size for the faiss
         emb_size = len(self.embed("test embedding")[0])
         embedding_db = np.empty((0, emb_size), dtype=np.float32)
-
-        model_name = self.embedder_model_id
-        model_kwargs = {"device": "cuda"}
-        encode_kwargs = {"normalize_embeddings": False}
-        hf = HuggingFaceEmbeddings(
-            model_name=model_name,
-            model_kwargs=model_kwargs,
-            encode_kwargs=encode_kwargs,
-        )
-
-        text_splitter = SemanticChunker(hf)
-        docs = text_splitter.create_documents([knowledge_base])
 
         idx_to_str = dict()
 
@@ -182,7 +178,10 @@ Reranker model: {self.reranker_model_id}
                 max_length=512,
             )
             scores = (
-                self.reranker_model(**inputs, return_dict=True)
+                self.reranker_model(
+                    **{k: v.to(self.embedder_model.device) for k, v in inputs.items()},
+                    return_dict=True,
+                )
                 .logits.view(
                     -1,
                 )
@@ -204,35 +203,33 @@ Reranker model: {self.reranker_model_id}
     ) -> tuple[tuple[str, list[tuple[str, float]]], str]:
         ranked = self.retrieve(question)
         context = "\n".join(
-            f"""DOCUMENT SIMILARITY: 
+            f"""{prompts.DOC_SIM_PROMPT[self.lang]}: 
 
-    {sim:.2f}
+{sim:.2f}
 
-    DOCUMENT TEXT:
+{prompts.DOC_TEXT_PROMPT[self.lang]}:
 
-    {sent}
-    """
+{sent}
+"""
             for sent, sim in ranked[:6]
         )
         messages_ = self.messages.copy()
         messages_.append(
             {
                 "role": "user",
-                "content": f"""CONTEXT:
+                "content": f"""{prompts.CONTEXT_PROMPT[self.lang]}:
 
-        {context}
+{context}
 
-        QUESTION:
+{prompts.QUESTION_PROMPT[self.lang]}:
 
-        {question}""",
+{question}""",
             }
         )
 
         res = self.reader_llm.chat(messages_, self.sampling_params)
 
-        return res[0].outputs[0].text, "\n".join(
-            (f"Sim: {sim:.2f} - {doc}" for doc, sim in ranked[:6])
-        )
+        return res, "\n".join((f"Sim: {sim:.2f} - {doc}" for doc, sim in ranked[:6]))
 
 
 if __name__ == "__main__":

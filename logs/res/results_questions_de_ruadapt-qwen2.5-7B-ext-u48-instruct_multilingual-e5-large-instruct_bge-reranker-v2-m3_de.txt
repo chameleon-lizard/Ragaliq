@@ -4,20 +4,22 @@ Reader Model: RefalMachine/ruadapt_qwen2.5_7B_ext_u48_instruct
 Embedder model: intfloat/multilingual-e5-large-instruct
 Reranker model: BAAI/bge-reranker-v2-m3
 score
-5    28
-4    16
-3    11
+5    25
+4    17
+3    13
 1    15
 Name: count, dtype: int64
 
+Language consistency score: 
+0.46580219159943104
 Mean score: 
-3.6
+3.5285714285714285
 Median score: 
 4.0
 Percentage: 
-72.0
+70.57142857142857
 Percentage with zero: 
-72.0
+70.57142857142857
 Generation time: 
-172.5082836151123
+60.437458992004395
 

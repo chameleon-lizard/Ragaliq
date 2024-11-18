@@ -1,0 +1,26 @@
+Eval file: data/questions_ru.json
+Judge model: google/gemini-flash-1.5
+Reader Model: google/gemma-2-2b-it
+Embedder model: deepvk/USER-bge-m3
+Reranker model: BAAI/bge-reranker-v2-m3
+score
+5    23
+4    19
+3    12
+1     6
+0    10
+Name: count, dtype: int64
+
+Language consistency score: 
+0.47020903061937874
+Mean score: 
+3.8833333333333333
+Median score: 
+4.0
+Percentage: 
+77.66666666666666
+Percentage with zero: 
+66.57142857142857
+Generation time: 
+26.515495777130127
+

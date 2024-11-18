@@ -4,22 +4,24 @@ Reader Model: Qwen/Qwen2.5-7B-Instruct
 Embedder model: intfloat/multilingual-e5-large-instruct
 Reranker model: BAAI/bge-reranker-v2-m3
 score
-5    24
-4    20
-3    10
-2     2
-1     8
-0     6
+5    22
+4    19
+3     9
+2     1
+1     9
+0     5
 Name: count, dtype: int64
 
+Language consistency score: 
+0.4079493010193513
 Mean score: 
-3.78125
+3.7333333333333334
 Median score: 
 4.0
 Percentage: 
-75.625
+74.66666666666667
 Percentage with zero: 
-69.14285714285715
+68.92307692307693
 Generation time: 
-161.18638706207275
+53.612178564071655
 

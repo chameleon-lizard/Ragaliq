@@ -50,7 +50,7 @@ weighted_score = {
 
 Since no answer is better than bad answer, but still worse than usable or incomplete answer, zero is being weighted with higher score than 1 and 2.
 
-To calculate the results, you can use script located in `src/calculate_results.py`.
+To calculate the results, you can use script located in `src/calculate_results.py`. Current results are available [at the results page](https://github.com/chameleon-lizard/Ragaliq/blob/main/results.md).
 
 ## Installation
 

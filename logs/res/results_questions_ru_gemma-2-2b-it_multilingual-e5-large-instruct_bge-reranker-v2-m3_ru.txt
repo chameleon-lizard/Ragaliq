@@ -4,21 +4,23 @@ Reader Model: google/gemma-2-2b-it
 Embedder model: intfloat/multilingual-e5-large-instruct
 Reranker model: BAAI/bge-reranker-v2-m3
 score
-5     8
-4    19
-3    10
-1    11
-0     2
+5    24
+4    11
+3    15
+1     5
+0     7
 Name: count, dtype: int64
 
+Language consistency score: 
+0.47812949607194366
 Mean score: 
-3.2708333333333335
+3.890909090909091
 Median score: 
 4.0
 Percentage: 
-65.41666666666667
+77.81818181818181
 Percentage with zero: 
-62.8
+69.03225806451613
 Generation time: 
-132.57262015342712
+26.417795658111572
 

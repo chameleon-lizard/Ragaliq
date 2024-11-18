@@ -4,21 +4,24 @@ Reader Model: CohereForAI/aya-expanse-8b
 Embedder model: intfloat/multilingual-e5-large-instruct
 Reranker model: BAAI/bge-reranker-v2-m3
 score
-5    35
-4    12
-3     8
-1    13
+5    20
+4     7
+3     5
+2     1
+1     5
 0     2
 Name: count, dtype: int64
 
+Language consistency score: 
+0.5401036268030935
 Mean score: 
-3.823529411764706
+3.9473684210526314
 Median score: 
 5.0
 Percentage: 
-76.47058823529413
+78.94736842105263
 Percentage with zero: 
-74.28571428571429
+75.0
 Generation time: 
-156.7052161693573
+60.88478970527649
 

@@ -3,18 +3,23 @@ import pathlib
 import time
 import json
 
+from safetensors.torch import save_file
 from tqdm import tqdm
 
+import numpy as np
 import pandas as pd
 
 import os
 import dotenv
 import threading
 import torch
+import transformers
+
 from queue import Queue
 
 import src.prompts as prompts
 import src.utils as utils
+import src.language_consistency_metric as lcm
 
 from src.rag import Chatbot
 
@@ -63,7 +68,10 @@ def generate_answers(
         if question in [output["question"] for output in outputs]:
             continue
 
-        answer, context = c.send_question(question)
+        answer_object, context = c.send_question(question)
+
+        answer = answer_object[0].outputs[0].text
+        collected_logprobs = lcm.collect_logprobs(answer_object)
 
         result = {
             "question": question,
@@ -71,15 +79,51 @@ def generate_answers(
             "source_doc": example["context"],
             "context": context,
             "generated_answer": answer,
+            "logprobs": collected_logprobs,
         }
 
         outputs.append(result)
 
     if save_filename is not None:
         with open(f"logs/eval/eval_ans_{save_filename}.json", "w") as f:
-            json.dump(outputs, f, indent=2)
+            json.dump(outputs, f, indent=2, ensure_ascii=False)
 
     return outputs
+
+
+def calculate_language_consistency(
+    data: list[dict[str, str]],
+    tokenizer: transformers.AutoTokenizer,
+    save_filename: str | None = None,
+) -> list[dict[str, str]]:
+    prob_dict = lcm.get_prob_dict(tokenizer, "data")
+
+    outputs = []
+    for example in data:
+        reference_answer_tokens = lcm.convert_text(
+            example["true_answer"].strip(), tokenizer
+        )
+        reference_answer_languages = lcm.classify_text_by_tokens(
+            example["true_answer"].strip(),
+            tokenizer,
+            prob_dict,
+        )
+
+        score = lcm.calculate_language_consistency(
+            example["logprobs"],
+            reference_answer_tokens,
+            reference_answer_languages,
+            language_classifier=lambda _: lcm.classify_token(_, prob_dict),
+        )
+
+        example["language_consistency_score"] = score
+        outputs.append(example)
+
+    if save_filename is not None:
+        with open(f"logs/eval/eval_ans_{save_filename}.json", "w") as f:
+            json.dump(outputs, f, indent=2, ensure_ascii=False)
+
+    return data
 
 
 def judge_answers(
@@ -106,7 +150,7 @@ def judge_answers(
 
     if save_filename is not None:
         with open(f"logs/eval/eval_res_{save_filename}.json", "w") as f:
-            json.dump(res, f, indent=2)
+            json.dump(res, f, indent=2, ensure_ascii=False)
 
     return res
 
@@ -172,6 +216,8 @@ if __name__ == "__main__":
         else:
             languages = [args.lang]
 
+    tokenizer = transformers.AutoTokenizer.from_pretrained(args.reader_model_id)
+
     for language in languages:
         eval_files = [f"data/questions_{language}.json"]
         text = pathlib.Path(f"data/orientation_{language}.md").read_text()
@@ -183,6 +229,7 @@ if __name__ == "__main__":
             embedder_model_id=args.embedder_model_id,
             reranker_model_id=args.reranker_model_id,
             use_decoder_as_embedder=args.use_decoder_as_embedder,
+            lang=language,
         )
 
         evals = []
@@ -210,6 +257,13 @@ if __name__ == "__main__":
             )
 
             generation_time = str(time.time() - start_time)
+
+            flattened_data = calculate_language_consistency(
+                data=flattened_data,
+                tokenizer=tokenizer,
+                save_filename=save_filename,
+            )
+
             times.append(generation_time)
 
             evals.append(
@@ -229,7 +283,9 @@ if __name__ == "__main__":
                 + str(c)
                 + str(df.score.value_counts().sort_index(ascending=False))
                 + "\n\n"
-                + "Mean score: \n"
+                + "Language consistency score: \n"
+                + str(df.language_consistency_score.mean())
+                + "\nMean score: \n"
                 + str(df.score[df.score != 0].mean())
                 + "\nMedian score: \n"
                 + str(df.score[df.score != 0].median())

@@ -1,0 +1,27 @@
+Eval file: data/questions_ru.json
+Judge model: google/gemini-flash-1.5
+Reader Model: RefalMachine/ruadapt_qwen2.5_7B_ext_u48_instruct
+Embedder model: ai-forever/ru-en-RoSBERTa
+Reranker model: BAAI/bge-reranker-base
+score
+5    19
+4    10
+3    17
+2     2
+1    16
+0     6
+Name: count, dtype: int64
+
+Language consistency score: 
+0.4983965694025527
+Mean score: 
+3.21875
+Median score: 
+3.0
+Percentage: 
+64.375
+Percentage with zero: 
+58.85714285714286
+Generation time: 
+46.410114765167236
+
