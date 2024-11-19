@@ -381,7 +381,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6521795374393092
+    "language_consistency_score": 0.6754244626979515
   },
   {
     "question": "What should students do if they have questions or technical issues with the course material?\n",
@@ -765,7 +765,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8862277410228969
+    "language_consistency_score": 0.914713208270406
   },
   {
     "question": "What is the email address for contacting the Skoltech education team with questions or technical problems?\n",
@@ -1347,7 +1347,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4154881545395664
+    "language_consistency_score": 0.4223573749456725
   },
   {
     "question": "What are the six target domains of Skoltech's research and education activities?\n",
@@ -2083,7 +2083,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.461423995280044
+    "language_consistency_score": 0.47470321781745134
   },
   {
     "question": "How does Skoltech ensure student input before drafting a policy?\n",
@@ -2665,7 +2665,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6215017316104332
+    "language_consistency_score": 0.6501501440218854
   },
   {
     "question": "How many enterprises have Skoltech faculty, students and alumni founded in Russia and abroad?\n",
@@ -3203,7 +3203,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.13485057761516306
+    "language_consistency_score": 0.1369898265658721
   },
   {
     "question": "Where can I find information about Skoltech policies?\n",
@@ -4005,7 +4005,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4740863787456297
+    "language_consistency_score": 0.4950551395062118
   },
   {
     "question": "What does the letter section, like \"A\" or \"C\", in a Skoltech location indicate?\n",
@@ -4631,7 +4631,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4403972610141014
+    "language_consistency_score": 0.4558433047177413
   },
   {
     "question": "What should students do if they hear an alarm during an emergency at Skoltech?\n",
@@ -5191,7 +5191,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5946647250530913
+    "language_consistency_score": 0.6259482688212128
   },
   {
     "question": "What should I do if there is a fire at Skoltech?\n",
@@ -5971,7 +5971,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.39271781577658504
+    "language_consistency_score": 0.4271052895785604
   },
   {
     "question": "What should you do if you need to evacuate a Skoltech building?\n",
@@ -6531,7 +6531,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5330538864299278
+    "language_consistency_score": 0.5649777413633497
   },
   {
     "question": "Where can I find more information about fire safety at Skoltech?\n",
@@ -7047,7 +7047,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.3242087184526647
+    "language_consistency_score": 0.34346615175229145
   },
   {
     "question": "What is the name of the universal laboratory for students and Skoltech community members where you can create almost anything, anytime?\n",
@@ -7673,7 +7673,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.35434666970408657
+    "language_consistency_score": 0.3615205843490413
   },
   {
     "question": "What are some examples of equipment available in the FabLab at Skoltech?\n",
@@ -8431,7 +8431,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4117411770295521
+    "language_consistency_score": 0.4303904222435633
   },
   {
     "question": "What are some of the things you can do at the Skoltech FabLab?\n",
@@ -9321,7 +9321,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.3721152329260792
+    "language_consistency_score": 0.39932642700700555
   },
   {
     "question": "How often does a Skoltech student need to repeat the required safety training course?\n",
@@ -9661,7 +9661,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6033745569858533
+    "language_consistency_score": 0.6314620237192824
   },
   {
     "question": "What email address should I use to order a car pass for the Skolkovo Innovation Center Territory?\n",
@@ -10683,7 +10683,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.3737331700069083
+    "language_consistency_score": 0.3799871996047034
   },
   {
     "question": "How many ECTS credits are needed to graduate from Skoltech?\n",
@@ -11353,7 +11353,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.2871825316918708
+    "language_consistency_score": 0.2941162306757826
   },
   {
     "question": "What email address should students contact if they have urgent questions or need assistance?\n",
@@ -12089,7 +12089,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4258781718589947
+    "language_consistency_score": 0.43322418139716135
   },
   {
     "question": "How many weeks before the start of a standard term does registration typically occur at Skoltech?\n\n",
@@ -12583,7 +12583,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.767693115639982
+    "language_consistency_score": 0.7942019036029759
   },
   {
     "question": "What is the name of the internal committee at Skoltech responsible for addressing student misconduct?\n",
@@ -13121,7 +13121,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5843143321003598
+    "language_consistency_score": 0.5946483533116494
   },
   {
     "question": "What does Skoltech's Disciplinary Board review cases related to?\n",
@@ -13681,7 +13681,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6781561933387215
+    "language_consistency_score": 0.6945813442522071
   },
   {
     "question": "What should you do if you are unsure about whether a certain action is appropriate during data manipulation?\n",
@@ -14087,7 +14087,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7152698022940457
+    "language_consistency_score": 0.7494936990514591
   },
   {
     "question": "What is the name of the Skolkovo train station that can be used to reach the Skoltech campus?\n",
@@ -14933,7 +14933,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.36840552497141116
+    "language_consistency_score": 0.3852798217565972
   },
   {
     "question": "Which public transportation line can be used to get to the Skolkovo Train station?\n",
@@ -15427,7 +15427,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5334120445241847
+    "language_consistency_score": 0.5510074095909466
   },
   {
     "question": "What is the name of the train station you should get off at to reach Skoltech from Moscow's MCD-1 metro line?\n",
@@ -15877,7 +15877,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.31239419592268713
+    "language_consistency_score": 0.3218728904895668
   },
   {
     "question": "What is the name of the carsharing service that has parking options around the Skolkovo territory?\n",
@@ -16305,7 +16305,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6402125225259936
+    "language_consistency_score": 0.6553307480196663
   },
   {
     "question": "How many ECTS credits are needed for the MSc Thesis Project?\n",
@@ -16579,7 +16579,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.11725110261670359
+    "language_consistency_score": 0.11741744987896731
   },
   {
     "question": "What is the email address for the Skoltech Education Department?\n",
@@ -17029,7 +17029,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.43096922687451367
+    "language_consistency_score": 0.4348841284584906
   },
   {
     "question": "How many ECTS credits are required for the Science, Technology, and Engineering track?\n",
@@ -17391,7 +17391,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.2274731918852375
+    "language_consistency_score": 0.23184293362349853
   },
   {
     "question": "How many ECTS credits does a student need to take for the Entrepreneurship and Innovation track?\n",
@@ -17819,7 +17819,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.2564918770323629
+    "language_consistency_score": 0.2607308867127931
   },
   {
     "question": "How many credits are required per term to maintain full-time student status at Skoltech?\n",
@@ -18621,7 +18621,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5096505195953529
+    "language_consistency_score": 0.5198517897565811
   },
   {
     "question": "What is the maximum number of credits a Skoltech student can take per term?\n",
@@ -19071,7 +19071,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.3402338687673364
+    "language_consistency_score": 0.3430789448514429
   },
   {
     "question": "What is the minimum number of credits a Skoltech student must be registered for each term to maintain full-time status?\n",
@@ -19697,7 +19697,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.31828104047348293
+    "language_consistency_score": 0.3226409422309254
   },
   {
     "question": "How many credits are students required to take per term at Skoltech?\n",
@@ -20279,7 +20279,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6057515661977574
+    "language_consistency_score": 0.6188315241617628
   },
   {
     "question": "Is the Innovation Workshop (IW) course at Skoltech mandatory for all students?\n",
@@ -20751,7 +20751,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6106504757804331
+    "language_consistency_score": 0.6280420072990693
   },
   {
     "question": "Is the Introduction Week (IW) course at Skoltech mandatory for all students?\n",
@@ -21223,7 +21223,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5635811863098762
+    "language_consistency_score": 0.5821836979765298
   },
   {
     "question": "What is the name of the document that provides information about academic leave of absence at Skoltech?\n",
@@ -21805,7 +21805,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6621258276111508
+    "language_consistency_score": 0.6856002755437394
   },
   {
     "question": "What department should students contact if they want to end their studies at Skoltech?\n",
@@ -22233,7 +22233,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.9245368467314468
+    "language_consistency_score": 0.9389874204803732
   },
   {
     "question": "What is the purpose of the Independent Study period at Skoltech?\n",
@@ -23057,7 +23057,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.671529522272114
+    "language_consistency_score": 0.7090253716447097
   },
   {
     "question": "How long is the Industrial Immersion program at Skoltech?\n",
@@ -23595,7 +23595,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6059035128387779
+    "language_consistency_score": 0.6323393841030073
   },
   {
     "question": "How many credits are awarded for successful completion of the Industrial Immersion program?\n",
@@ -24001,7 +24001,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.29032287856415817
+    "language_consistency_score": 0.29825262249805545
   },
   {
     "question": "When should a Skoltech student propose their thesis topic to a research advisor?\n",
@@ -24737,7 +24737,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6532243085308478
+    "language_consistency_score": 0.6876988938561681
   },
   {
     "question": "When is the deadline to submit a complete MSc thesis proposal?\n",
@@ -25143,7 +25143,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.88615873371993
+    "language_consistency_score": 0.9059493675108706
   },
   {
     "question": "What are the first milestones for the MSc Thesis Project at Skoltech?\n",
@@ -26187,7 +26187,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6840082944418994
+    "language_consistency_score": 0.7092493690873893
   },
   {
     "question": "What is the email address for contacting the Industrial Studies department at Skoltech?\n",
@@ -26725,7 +26725,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.30086835609158824
+    "language_consistency_score": 0.3038027810741783
   },
   {
     "question": "What are the Skoltech library's key services?\n",
@@ -27285,7 +27285,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.535118232289607
+    "language_consistency_score": 0.5569988208336887
   },
   {
     "question": "What is the email address for the Skoltech Knowledge Transfer Office (KTO)?\n",
@@ -27845,7 +27845,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4372258325411091
+    "language_consistency_score": 0.4421435677688706
   },
   {
     "question": "What kind of intellectual property rights are retained by Skoltech when a student or faculty member creates an invention using Skoltech resources?\n",
@@ -28493,7 +28493,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.45330007000232636
+    "language_consistency_score": 0.47165601863222817
   },
   {
     "question": "What is the name of the Skoltech policy document related to intellectual property?\n",
@@ -29185,7 +29185,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5134871759500029
+    "language_consistency_score": 0.5187244034454476
   },
   {
     "question": "How much is the monthly stipend for MSc students who co-found a startup in the Skolkovo ecosystem?\n\n",
@@ -29789,7 +29789,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.15828802324077795
+    "language_consistency_score": 0.16371716039150033
   },
   {
     "question": "What email address should students contact to learn more about scholarship application procedures?\n",
@@ -30195,7 +30195,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4355899140192887
+    "language_consistency_score": 0.44919631832906454
   },
   {
     "question": "What is the main way the Skoltech Student Council represents the interests of students?\n",
@@ -31085,7 +31085,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6844328232111523
+    "language_consistency_score": 0.7093692007909322
   },
   {
     "question": "What are some examples of events organized by the Skoltech Student Council?\n",
@@ -31799,7 +31799,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5260147792101215
+    "language_consistency_score": 0.5445283147929338
   },
   {
     "question": "What organization acts as a liaison between Skoltech students and the administration?\n",
@@ -32183,7 +32183,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8381445020037804
+    "language_consistency_score": 0.8549733026871208
   },
   {
     "question": "What are some examples of events that Skoltech students can attend?\n",
@@ -32875,7 +32875,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.43252676441139476
+    "language_consistency_score": 0.4435900266053397
   },
   {
     "question": "What is the email address to contact the Skoltech Student Council?\n",
@@ -33633,7 +33633,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.3770772390122299
+    "language_consistency_score": 0.38071074247561104
   },
   {
     "question": "What is the name of the online platform used to address student questions and requests at Skoltech?\n",
@@ -34193,7 +34193,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.46842877890848555
+    "language_consistency_score": 0.4755335486940326
   },
   {
     "question": "When can students at Skoltech expect to receive their building pass?\n",
@@ -34775,7 +34775,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5575487153545098
+    "language_consistency_score": 0.5894486239205023
   },
   {
     "question": "What is the name of the Skoltech email that provides a compilation of information, news, leadership opportunities, and daily campus information?\n",
@@ -35313,7 +35313,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.31576238215659996
+    "language_consistency_score": 0.3250359064452012
   },
   {
     "question": "What insurance company provides medical insurance for Skoltech students?\n",
@@ -35697,7 +35697,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.46758673361827213
+    "language_consistency_score": 0.4847539307250264
   },
   {
     "question": "Where is the Student Support archive located at Skoltech?\n",
@@ -36499,7 +36499,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.35147811981500493
+    "language_consistency_score": 0.3595037358667155
   },
   {
     "question": "What is the email domain used for university email addresses at Skoltech?\n",
@@ -36971,7 +36971,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.46269638681312036
+    "language_consistency_score": 0.4692361605708319
   },
   {
     "question": "What are some examples of services available through the Skoltech HelpDesk?\n",
@@ -37531,7 +37531,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5111440769654549
+    "language_consistency_score": 0.5440217220619461
   },
   {
     "question": "What is the purpose of travel that should be stated on the Migration Card for international students at Skoltech?\n",
@@ -38223,7 +38223,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7417368463742594
+    "language_consistency_score": 0.7626855283375745
   },
   {
     "question": "What is the name of the document that confirms the purpose of arrival in Russia for international students?\n",
@@ -38651,7 +38651,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.44055994893424283
+    "language_consistency_score": 0.4536803899747632
   },
   {
     "question": "What is the link to the checklist for Skoltech students regarding changes in status, location, or documents?\n",
@@ -39343,7 +39343,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.2764762073945765
+    "language_consistency_score": 0.2877422548481479
   },
   {
     "question": "How many days in advance should an international student at Skoltech notify the school if they are changing their accommodation to stay in a hotel or with friends?\n",
@@ -40123,7 +40123,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6527233956000215
+    "language_consistency_score": 0.6739752090973337
   },
   {
     "question": "How many days in advance should an international Skoltech student notify the school if they are going on a personal or academic trip?\n",
@@ -40771,7 +40771,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6301019919566889
+    "language_consistency_score": 0.6532276288206298
   },
   {
     "question": "How many days before departure should an international student at Skoltech submit a request for academic leave?\n",
@@ -41375,6 +41375,6 @@
         }
       ]
     ],
-    "language_consistency_score": 0.39411497459491607
+    "language_consistency_score": 0.40744792984942474
   }
 ]

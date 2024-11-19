@@ -179,7 +179,7 @@ def calculate_language_consistency(
         )
 
         # Token score
-        token_score = certainty_score * stability_adjustment * max_matching_prob
+        token_score = certainty_score * max_matching_prob  # * stability_adjustment
 
         # Accumulate the score for this token
         total_score += token_score

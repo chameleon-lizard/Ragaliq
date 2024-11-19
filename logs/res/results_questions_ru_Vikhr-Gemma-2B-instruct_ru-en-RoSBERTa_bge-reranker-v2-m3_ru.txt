@@ -1,0 +1,27 @@
+Eval file: data/questions_ru.json
+Judge model: qwen/qwen-2.5-72b-instruct
+Reader Model: Vikhrmodels/Vikhr-Gemma-2B-instruct
+Embedder model: ai-forever/ru-en-RoSBERTa
+Reranker model: BAAI/bge-reranker-v2-m3
+score
+5    23
+4    11
+3    16
+2    12
+1     7
+0     1
+Name: count, dtype: int64
+
+Language consistency score: 
+0.5012006938223853
+Mean score: 
+3.449275362318841
+Median score: 
+3.0
+Percentage: 
+68.98550724637683
+Percentage with zero: 
+68.0
+Generation time: 
+34.4268217086792
+

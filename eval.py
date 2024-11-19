@@ -269,7 +269,7 @@ if __name__ == "__main__":
             evals.append(
                 judge_answers(
                     flattened_data=flattened_data,
-                    num_threads=50,
+                    num_threads=10,
                     save_filename=save_filename,
                 )
             )

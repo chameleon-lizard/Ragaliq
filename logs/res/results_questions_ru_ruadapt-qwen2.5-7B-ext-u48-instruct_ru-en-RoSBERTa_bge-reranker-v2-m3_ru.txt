@@ -1,0 +1,27 @@
+Eval file: data/questions_ru.json
+Judge model: qwen/qwen-2.5-72b-instruct
+Reader Model: RefalMachine/ruadapt_qwen2.5_7B_ext_u48_instruct
+Embedder model: ai-forever/ru-en-RoSBERTa
+Reranker model: BAAI/bge-reranker-v2-m3
+score
+5    26
+4    15
+3    15
+2     5
+1     5
+0     4
+Name: count, dtype: int64
+
+Language consistency score: 
+0.5337747327914792
+Mean score: 
+3.787878787878788
+Median score: 
+4.0
+Percentage: 
+75.75757575757575
+Percentage with zero: 
+71.42857142857143
+Generation time: 
+49.851783752441406
+

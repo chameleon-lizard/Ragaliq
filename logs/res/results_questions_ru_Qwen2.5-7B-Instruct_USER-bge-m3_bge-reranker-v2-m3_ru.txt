@@ -1,27 +1,27 @@
 Eval file: data/questions_ru.json
-Judge model: google/gemini-flash-1.5
+Judge model: qwen/qwen-2.5-72b-instruct
 Reader Model: Qwen/Qwen2.5-7B-Instruct
 Embedder model: deepvk/USER-bge-m3
 Reranker model: BAAI/bge-reranker-v2-m3
 score
-5    26
-4    15
-3    12
-2     1
-1     8
-0     8
+5    30
+4    13
+3    11
+2     2
+1     3
+0    11
 Name: count, dtype: int64
 
 Language consistency score: 
-0.5966692965854322
+0.6033665494239707
 Mean score: 
-3.806451612903226
+4.101694915254237
 Median score: 
-4.0
+5.0
 Percentage: 
-76.12903225806453
+82.03389830508473
 Percentage with zero: 
-67.42857142857143
+69.14285714285715
 Generation time: 
-56.302983045578
+56.4736692905426
 

@@ -711,7 +711,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7306666671778619
+    "language_consistency_score": 0.7555223049101465
   },
   {
     "question": "我在斯科尔科沃科技学院哪里可以找到更多关于消防安全的信息？\n",
@@ -1667,7 +1667,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.46437948336204793
+    "language_consistency_score": 0.4676697315745164
   },
   {
     "question": "一名斯科尔科沃科技学院的学生每学期最多可以修多少学分？\n",
@@ -2117,7 +2117,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.940802248111655
+    "language_consistency_score": 0.9436594708113331
   },
   {
     "question": "学生如果对课程材料有疑问或技术问题该怎么办？\n",
@@ -2699,7 +2699,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.9464471885308018
+    "language_consistency_score": 0.9510755752875523
   },
   {
     "question": "一名斯科尔科沃科技学院的学生每个学期至少需要注册多少学分才能保持全日制学生身份？\n",
@@ -3281,7 +3281,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.9217302672103638
+    "language_consistency_score": 0.9284072983745081
   },
   {
     "question": "所有学生都必须参加斯科尔科沃科技学院的入学周 (IW) 课程吗？\n",
@@ -3775,7 +3775,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8683977885016273
+    "language_consistency_score": 0.8818561480048291
   },
   {
     "question": "如果你不确定某个操作在数据处理过程中是否合适，应该怎么办？\n",
@@ -4621,7 +4621,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8441303984558699
+    "language_consistency_score": 0.8659025403098384
   },
   {
     "question": "斯科尔科沃科技学院（Skoltech）的创新工作坊（IW）课程对所有学生都强制要求吗？\n",
@@ -5599,7 +5599,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.805113050502576
+    "language_consistency_score": 0.8238256618402778
   },
   {
     "question": "斯科尔科沃科技学院(Skoltech)的创新工作坊(IW)课程对所有学生都强制要求吗？\n",
@@ -6577,7 +6577,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7477730408047463
+    "language_consistency_score": 0.7666261475787679
   },
   {
     "question": "在斯科尔科沃科技学院，每学期需要多少学分才能保持全日制学生身份？\n",
@@ -7203,7 +7203,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.9114107405813129
+    "language_consistency_score": 0.9211549848980978
   },
   {
     "question": "如果您需要疏散斯科尔科沃科技学院的建筑物，应该怎么做？\n",
@@ -8005,7 +8005,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8285457656642199
+    "language_consistency_score": 0.8531449958801592
   },
   {
     "question": "在Skoltech，学生每学期需要修多少学分？\n",
@@ -8367,7 +8367,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8561443896200269
+    "language_consistency_score": 0.8711605961126873
   },
   {
     "question": "如果斯科尔科沃科技学院发生紧急情况时学生听到警报声，应该怎么办？\n",
@@ -9345,7 +9345,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7474155999786326
+    "language_consistency_score": 0.7754393675670539
   },
   {
     "question": "联系Skoltech教育团队咨询问题或技术故障的邮箱地址是什么？\n",
@@ -9949,7 +9949,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5062959837033139
+    "language_consistency_score": 0.5084138353973083
   },
   {
     "question": "Skoltech的迎新课程是学术课程的一部分吗？\n",
@@ -10883,7 +10883,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8067535440311479
+    "language_consistency_score": 0.8241225277520854
   },
   {
     "question": "我在哪里可以找到关于Skoltech政策的信息？\n",
@@ -11971,7 +11971,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5871276476589149
+    "language_consistency_score": 0.5929406581466714
   },
   {
     "question": "我应该使用哪个邮箱地址来订购斯科尔科沃创新中心区域的停车证？\n",
@@ -12707,7 +12707,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4187808086604152
+    "language_consistency_score": 0.4213213544870614
   },
   {
     "question": "斯科尔科沃科技学院如何在制定政策之前确保学生的意见？\n",
@@ -13245,7 +13245,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8733645480504624
+    "language_consistency_score": 0.8838619406145193
   },
   {
     "question": "在Skoltech，独立学习时间的目的是什么？\n",
@@ -13563,7 +13563,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8673377856685035
+    "language_consistency_score": 0.877202716339915
   },
   {
     "question": "斯科尔科沃科技学院知识转移办公室（KTO）的邮箱地址是什么？\n",
@@ -14167,7 +14167,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.35399975710723725
+    "language_consistency_score": 0.35560029554053646
   },
   {
     "question": "当学生或教职工使用斯科尔科沃科技学院资源进行发明创造时，斯科尔科沃科技学院保留何种知识产权？\n",
@@ -14617,7 +14617,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8136955667101692
+    "language_consistency_score": 0.8293827217569509
   },
   {
     "question": "请问斯考尔科沃科技学院关于学术休假的相关信息文件叫什么名字？\n",
@@ -15309,7 +15309,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4504746659565323
+    "language_consistency_score": 0.45329360036803995
   },
   {
     "question": "斯科尔科沃科技大学地址中的字母部分，例如“A”或“C”，代表什么含义？\n",
@@ -16001,7 +16001,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.562972359139058
+    "language_consistency_score": 0.583852828554971
   },
   {
     "question": "如果学生想结束在Skoltech的学业，应该联系哪个部门？\n",
@@ -16913,7 +16913,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7752509512542891
+    "language_consistency_score": 0.7841324049732007
   },
   {
     "question": "联系斯科尔科沃科技学院工业研究系的邮箱地址是什么？\n",
@@ -17627,7 +17627,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4512944970708533
+    "language_consistency_score": 0.4627163979897765
   },
   {
     "question": "Skoltech学生可以参加哪些活动的例子？\n",
@@ -18649,7 +18649,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.78948812728191
+    "language_consistency_score": 0.8006902410425676
   },
   {
     "question": "有多少企业是由斯科尔科沃科技学院的教师、学生和校友在俄罗斯和国外创立的？\n",
@@ -19341,7 +19341,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.44898595212218584
+    "language_consistency_score": 0.45400310475589134
   },
   {
     "question": "学生应该联系哪个邮箱地址以了解更多关于奖学金申请流程的信息？\n",
@@ -19901,7 +19901,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4163874862745602
+    "language_consistency_score": 0.4183763458705208
   },
   {
     "question": "成功完成工业沉浸项目可获得多少学分？\n",
@@ -20241,7 +20241,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8959467861561377
+    "language_consistency_score": 0.9019993428670315
   },
   {
     "question": "斯科尔科沃科技学院教育部的邮箱地址是什么？\n",
@@ -20911,7 +20911,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.46625163904825917
+    "language_consistency_score": 0.4796608770485459
   },
   {
     "question": "创业与创新方向需要多少学分？\n",
@@ -21207,7 +21207,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6798674579030661
+    "language_consistency_score": 0.6841633221318854
   },
   {
     "question": "Skoltech HelpDesk 提供哪些服务？\n",
@@ -22009,7 +22009,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7937450049155337
+    "language_consistency_score": 0.8051332836959959
   },
   {
     "question": "从斯科尔科沃科技学院毕业需要多少学分？\n",
@@ -22613,7 +22613,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8836427604745962
+    "language_consistency_score": 0.8980005283392728
   },
   {
     "question": "学生如有紧急问题或需要帮助，应该联系哪个邮箱地址？\n",
@@ -23107,7 +23107,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.5346905291315524
+    "language_consistency_score": 0.5362060298363317
   },
   {
     "question": "斯科尔科沃FabLab有哪些设备？\n",
@@ -23557,7 +23557,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6935413279408502
+    "language_consistency_score": 0.7111980214133226
   },
   {
     "question": "可以到达斯科尔科沃科技学院校区的斯科尔科沃火车站叫什么名字？\n",
@@ -23985,7 +23985,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.661059361896803
+    "language_consistency_score": 0.6657332860750163
   },
   {
     "question": "一名斯科尔科沃科技学院的学生需要多久重复一次必修的安全培训课程？\n",
@@ -24501,7 +24501,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8506328994128205
+    "language_consistency_score": 0.860029646194738
   },
   {
     "question": "关于知识产权的Skoltech政策文件名称是什么？\n",
@@ -24731,7 +24731,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7235353428725182
+    "language_consistency_score": 0.7334221795307748
   },
   {
     "question": "理学、技术与工程方向需要多少学分？\n",
@@ -25203,7 +25203,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7892368546360276
+    "language_consistency_score": 0.811696548453122
   },
   {
     "question": "可以乘坐哪条公共交通线路到达斯科尔科沃火车站？\n",
@@ -25763,7 +25763,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8391277619044497
+    "language_consistency_score": 0.8452178137646149
   },
   {
     "question": "请问斯科尔科沃科技学院用于解答学生问题和请求的在线平台叫什么名字？\n",
@@ -26455,7 +26455,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.43949985708790523
+    "language_consistency_score": 0.4490784980471445
   },
   {
     "question": "MSc论文项目需要多少学分？\n",
@@ -26751,7 +26751,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7757406679355857
+    "language_consistency_score": 0.7777044147576986
   },
   {
     "question": "Skoltech学生关于状态、位置或文件变更的清单链接是什么？\n",
@@ -27971,7 +27971,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4597733082972293
+    "language_consistency_score": 0.4641078447046295
   },
   {
     "question": "Skoltech纪律委员会审查哪些类型的案件？\n",
@@ -28531,7 +28531,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8384269474089008
+    "language_consistency_score": 0.8462801691239988
   },
   {
     "question": "从莫斯科MCD-1地铁线到斯科尔科沃科技学院，应该在哪一站下车？\n",
@@ -28937,7 +28937,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7601756264471181
+    "language_consistency_score": 0.7642976628326915
   },
   {
     "question": "你在Skoltech FabLab可以做些什么？\n",
@@ -29673,7 +29673,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6827551208527354
+    "language_consistency_score": 0.7027827051213205
   },
   {
     "question": "标准学期开始前，Skoltech的注册通常提前几周？\n",
@@ -30079,7 +30079,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8650072026755375
+    "language_consistency_score": 0.8699898826244495
   },
   {
     "question": "斯科尔科沃科技学院的工业实习项目持续多久？\n",
@@ -30793,7 +30793,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8313323343287304
+    "language_consistency_score": 0.8500478138045267
   },
   {
     "question": "哪个组织负责斯科尔科沃科技学院学生与学校管理层之间的联络？\n",
@@ -31199,7 +31199,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.9436616472790058
+    "language_consistency_score": 0.9440083506995679
   },
   {
     "question": "斯科尔科沃科技学院学生会组织过哪些活动的例子？\n",
@@ -31979,7 +31979,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8696131334654399
+    "language_consistency_score": 0.8826047543375433
   },
   {
     "question": "Skoltech的学生什么时候可以拿到他们的楼宇通行证？\n",
@@ -32451,7 +32451,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8336572665546227
+    "language_consistency_score": 0.839108402362875
   },
   {
     "question": "负责处理学生行为不端的斯科尔科沃科技学院内部委员会名称是什么？\n",
@@ -33011,7 +33011,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6802283480388935
+    "language_consistency_score": 0.6918839426043157
   },
   {
     "question": "学生支持档案位于斯科尔科沃科技学院的什么地方？\n",
@@ -33461,7 +33461,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6245536602399755
+    "language_consistency_score": 0.6277799941868265
   },
   {
     "question": "斯科尔科沃科技学院学生会代表学生利益的主要方式是什么？\n",
@@ -34505,7 +34505,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7977972962486576
+    "language_consistency_score": 0.8181685335116806
   },
   {
     "question": "在Skoltech攻读硕士论文项目，最初的里程碑是什么？\n",
@@ -35065,7 +35065,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.676577767668352
+    "language_consistency_score": 0.7093992589928467
   },
   {
     "question": "在斯科尔科沃地区提供停车位的汽车共享服务叫什么名字？\n",
@@ -35515,7 +35515,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.6566979458729303
+    "language_consistency_score": 0.6658665412331904
   },
   {
     "question": "斯科尔科沃科技学院图书馆的主要服务是什么？\n",
@@ -36823,7 +36823,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8788933443944489
+    "language_consistency_score": 0.8975824942456284
   },
   {
     "question": "Skoltech的科研和教育活动有哪六个目标领域？\n",
@@ -38219,7 +38219,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.640364064243116
+    "language_consistency_score": 0.6538840409866166
   },
   {
     "question": "联系斯科尔科沃科技学院学生会的邮箱地址是什么？\n",
@@ -38977,7 +38977,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4302469567193441
+    "language_consistency_score": 0.4318034070815695
   },
   {
     "question": "学生和Skoltech社区成员可以随时创造几乎任何东西的通用实验室叫什么名字？\n",
@@ -39471,7 +39471,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7794193926522479
+    "language_consistency_score": 0.7866332313334901
   },
   {
     "question": "提供信息、新闻、领导力机会和每日校园信息的Skoltech邮件叫什么名字？\n",
@@ -40141,7 +40141,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.4617007128250197
+    "language_consistency_score": 0.468720367805304
   },
   {
     "question": "MSc 论文提纲提交的截止日期是什么时候？\n",
@@ -40833,7 +40833,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.728706240484603
+    "language_consistency_score": 0.7550880925713588
   },
   {
     "question": "哪家保险公司为斯科尔科沃科技学院的学生提供医疗保险？\n",
@@ -41415,7 +41415,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7595896340508775
+    "language_consistency_score": 0.7783520209643608
   },
   {
     "question": "斯科尔科沃科技学院的国际学生如果要更改住宿，住酒店或朋友家，需要提前多少天通知学校？\n",
@@ -42151,7 +42151,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8740299022962802
+    "language_consistency_score": 0.8858879911000315
   },
   {
     "question": "国际学生如果要进行个人或学术旅行，应提前多少天通知斯科尔科沃科技学院？\n",
@@ -42689,7 +42689,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8775075494268116
+    "language_consistency_score": 0.8931447493449588
   },
   {
     "question": "什么时候斯科尔科沃科技学院的学生应该向研究导师提出他们的论文题目？\n",
@@ -43733,7 +43733,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.773268737301834
+    "language_consistency_score": 0.8010843245424369
   },
   {
     "question": "斯科尔科沃科技学院的国际学生需要提前多少天提交休学申请？\n",
@@ -44161,7 +44161,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.9054934516858104
+    "language_consistency_score": 0.9169290293899316
   },
   {
     "question": "斯科尔科沃科技学院国际学生移民卡上应申报的旅行目的为何？\n",
@@ -44809,7 +44809,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.901529383798148
+    "language_consistency_score": 0.9125917008452042
   },
   {
     "question": "国际学生入境俄罗斯的用途确认文件叫什么名字？\n",
@@ -45127,7 +45127,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.8759596043666503
+    "language_consistency_score": 0.8867184720482492
   },
   {
     "question": "在斯科尔科沃生态系统中，共同创立初创公司的硕士研究生每月津贴是多少？\n",
@@ -46017,7 +46017,7 @@
         }
       ]
     ],
-    "language_consistency_score": 0.7446163250133723
+    "language_consistency_score": 0.7643280007651819
   },
   {
     "question": "斯科尔科沃科技学院大学邮箱的域名是什么？\n",
@@ -46445,6 +46445,6 @@
         }
       ]
     ],
-    "language_consistency_score": 0.42554099227423703
+    "language_consistency_score": 0.4322091188708153
   }
 ]
